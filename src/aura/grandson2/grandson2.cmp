@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="grandson2title" type="String"/>
+    <div class="slds-p-around_small">
+        <p>Grandson2</p>
+        <p>{!v.grandson2title}</p>
+        <lightning:button variant="brand" label="Set title on grandson 2 controller" onclick="{! c.setTitle }" class="slds-align_absolute-center"/>
+    </div>
+</aura:component>

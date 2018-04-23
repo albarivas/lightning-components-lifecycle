@@ -1,0 +1,8 @@
+<aura:component >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="grandsontitle" type="String"/>
+    <div class="slds-p-around_small">
+	    <p>Grandson</p>
+    	<p>{!v.grandsontitle}</p>
+    </div>
+</aura:component>

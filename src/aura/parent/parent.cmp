@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="title" type="String" />
+    <div class="slds-container_small slds-container_center slds-p-around_small">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutitem size="12">
+                <p>Parent</p>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="12">
+                <c:child childtitle="{!v.title}"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="12">
+                <c:child2 child2title="{!v.title}"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="12">
+                <lightning:button variant="brand" label="Set title on parent controller" onclick="{! c.setTitle }" class="slds-align_absolute-center slds-m-top_small"/>
+            </lightning:layoutitem>
+        </lightning:layout>
+    </div>
+</aura:component>
